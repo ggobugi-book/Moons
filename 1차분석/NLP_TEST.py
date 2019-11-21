@@ -2,13 +2,29 @@ from konlpy.tag import Komoran
 from pprint import pprint
 import numpy
 import scipy
+from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
 
 komorean=Komoran() 
-text_file=open("C:/Users/user/Documents/Moons/1차분석/test2.txt",encoding='utf-8')
+text_file=open("C:/Users/student/Documents/GitHub/Moons/1차분석/test1.txt",encoding='utf-8')
 
-text = text_file.read().replace
-pprint(list(komorean.pos(text)))
+text = text_file.readlines()
+#text_list = list(text)
+#pprint(text)
 
+cv=CountVectorizer()
+word_count_vector=cv.fit_transform(text)
+print(word_count_vector)
+
+
+
+#ㅡㅡㅡㅡㅡㅡㅡㅡ<여러 시도>ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+# pprint((komorean.pos(text)))
+# text_file.close()
+# vec_file=CountVectorizer(text_list)
+# vec_file.fit(text_list)
+# vec_file.vocabulary_
+# print(vec_file)
 
 # print(text)
 
