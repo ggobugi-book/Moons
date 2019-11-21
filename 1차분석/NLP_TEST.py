@@ -6,8 +6,8 @@ import scipy
 komorean=Komoran() 
 text_file=open("C:/Users/user/Documents/Moons/1차분석/test2.txt",encoding='utf-8')
 
-text = text_file.read()
-pprint(komorean.pos(text))
+text = text_file.read().replace
+pprint(list(komorean.pos(text)))
 
 
 # print(text)
