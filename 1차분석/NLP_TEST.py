@@ -26,4 +26,4 @@ pprint(list(komorean.pos(text)))
 #print(komorean.pos(u'text_file'))
 
 #참고: 다음기사 크롤링 https://leegijun.tistory.com/5
-#참고: TF-IDF 라이브러리 - Scikit-Learn : https://blog.naver.com/shrntg/220655244241
+#참고: TF-IDF 라이브러리 - Scikit-Learn : https://blog.naver.com/shrntg/220655244241  /https://scikit-learn.org/dev/developers/advanced_installation.html
