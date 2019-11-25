@@ -8,31 +8,40 @@ import pandas as pd
 
 komorean=Komoran() 
 text_file=open("C:/Users/student/Documents/GitHub/Moons/1차분석/test3.txt",encoding='utf-8')
-
+pre_text_file = text_file
 text = text_file.readlines()
+#pprint(text)
 #text_list = list(text)
 #pprint(text)
 
-cv=CountVectorizer()
-word_count_vector=cv.fit_transform(text)
-#print(word_count_vector)
+# cv=CountVectorizer()
+# word_count_vector=cv.fit_transform(text)
+# #print(word_count_vector)
 
-tfidf_tranformer=TfidfTransformer(smooth_idf=True,use_idf=True)
-tfidf_tranformer.fit(word_count_vector)
+# tfidf_tranformer=TfidfTransformer(smooth_idf=True,use_idf=True)
+# tfidf_tranformer.fit(word_count_vector)
 
-df_idf=pd.DataFrame(tfidf_tranformer.idf_,index=cv.get_feature_names(),columns=['idf_weight'])
-df_idf.sort_values(by=['idf_weight'])
+# df_idf=pd.DataFrame(tfidf_tranformer.idf_,index=cv.get_feature_names(),columns=['idf_weight'])
+# df_idf.sort_values(by=['idf_weight'])
 
-count_vector=cv.transform(text)
-tf_idf_vector=tfidf_tranformer.transform(count_vector)
+# count_vector=cv.transform(text)
+# tf_idf_vector=tfidf_tranformer.transform(count_vector)
 
-feature_names = cv.get_feature_names()
-frist_document_vector=tf_idf_vector[0]
+# feature_names = cv.get_feature_names()
+# frist_document_vector=tf_idf_vector[0]
 
-df=pd.DataFrame(frist_document_vector.T.todense(),index=feature_names,columns=["tf-idf"])
-df.sort_values(by=["tf-idf"],ascending=True)
 
+tfidf_vectorizer = TfidfVectorizer(use_idf=True)
+tfidf_vectorizer_vectors = tfidf_vectorizer.fit_transform(text)
+print(tfidf_vectorizer_vectors)
+
+first_vector_tfidfvectorizer=tfidf_vectorizer_vectors[0]
+#print(first_vector_tfidfvectorizer)
+
+df=pd.DataFrame(first_vector_tfidfvectorizer.T.todense(),index=tfidf_vectorizer.get_feature_names(),columns=["tf-idf"])
+# df.sort_values(by=["tf-idf"],ascending=True)
 print(df)
+# print(df)
 
 #ㅡㅡㅡㅡㅡㅡㅡㅡ<여러 시도>ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 # pprint((komorean.pos(text)))
