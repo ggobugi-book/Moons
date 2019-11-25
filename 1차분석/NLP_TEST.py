@@ -5,11 +5,15 @@ import scipy
 from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 import pandas as pd
+from IPython import embed
 
-komorean=Komoran() 
-text_file=open("C:/Users/student/Documents/GitHub/Moons/1차분석/test3.txt",encoding='utf-8')
-pre_text_file = text_file
-text = text_file.readlines()
+komoran=Komoran() 
+text_file=open("C:/Users/student/Documents/GitHub/Moons/1차분석/test3.txt",encoding='utf-8').readlines()
+#text = text_file.readlines()
+#text_nouns=komoran.pos(text_file)
+embed()
+#print(text_nouns)
+
 #pprint(text)
 #text_list = list(text)
 #pprint(text)
@@ -31,20 +35,20 @@ text = text_file.readlines()
 # frist_document_vector=tf_idf_vector[0]
 
 
-tfidf_vectorizer = TfidfVectorizer(use_idf=True)
-tfidf_vectorizer_vectors = tfidf_vectorizer.fit_transform(text)
-print(tfidf_vectorizer_vectors)
+# tfidf_vectorizer = TfidfVectorizer(use_idf=True)
+# tfidf_vectorizer_vectors = tfidf_vectorizer.fit_transform(text_nouns)
+#print(tfidf_vectorizer_vectors)
 
-first_vector_tfidfvectorizer=tfidf_vectorizer_vectors[0]
+# first_vector_tfidfvectorizer=tfidf_vectorizer_vectors[0]
 #print(first_vector_tfidfvectorizer)
 
-df=pd.DataFrame(first_vector_tfidfvectorizer.T.todense(),index=tfidf_vectorizer.get_feature_names(),columns=["tf-idf"])
+# df=pd.DataFrame(first_vector_tfidfvectorizer.T.todense(),index=tfidf_vectorizer.get_feature_names(),columns=["tf-idf"])
 # df.sort_values(by=["tf-idf"],ascending=True)
-print(df)
+# print(df)
 # print(df)
 
 #ㅡㅡㅡㅡㅡㅡㅡㅡ<여러 시도>ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-# pprint((komorean.pos(text)))
+# komorean.pos(text)
 # text_file.close()
 # vec_file=CountVectorizer(text_list)
 # vec_file.fit(text_list)
