@@ -25,8 +25,10 @@ tfidf.fit(word_count_vector)
 #행렬형식으로 문서의 단어 개수를 가지고오는 코드
 count_vector =cv.transform(noun_data)
 print(count_vector)
+
 #print(count_vector.shape())
 #tf-idf score
+
 tfidf_vector = tfidf.transform(count_vector)
 noun_names = cv.get_feature_names()
 first_document_vec = tfidf_vector[2100]
