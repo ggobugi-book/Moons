@@ -1,0 +1,59 @@
+ERROR: Command errored out with exit status 1:
+     command: 'C:\Users\user\AppData\Local\Programs\Python\Python38\python.exe' -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\user\\AppData\\Local\\Temp\\pip-install-14v2k0rf\\scikit-learn\\setup.py'"'"'; __file__='"'"'C:\\Users\\user\\AppData\\Local\\Temp\\pip-install-14v2k0rf\\scikit-learn\\setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\user\AppData\Local\Temp\pip-record-kvqibxaj\install-record.txt' --single-version-externally-managed --compile
+         cwd: C:\Users\user\AppData\Local\Temp\pip-install-14v2k0rf\scikit-learn\
+    Complete output (38 lines):
+    Partial import of sklearn during the build process.
+    No module named 'numpy.distutils._msvccompiler' in numpy.distutils; trying from distutils
+    b'*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*
+    \x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\
+    x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*
+    \x00*\x00*\x00*\x00\r\x00\n\x00*\x00*\x00 \x00V\x00i\x00s\x00u\x00a\x00l\x00 \x00S\x00t\x00u\x00d\x00i\x00o\x00 
+    \x002\x000\x001\x009\x00 \x00D\x00e\x00v\x00e\x00l\x00o\x00p\x00e\x00r\x00 \x00C\x00o\x00m\x00m\x00a\x00n\x00d\x00 
+    \x00P\x00r\x00o\x00m\x00p\x00t\x00 \x00v\x001\x006\x00.\x003\x00.\x001\x000\x00\r\x00\n\x00*\x00*\x00 \x00C\x00o\x00p\x00y\x00r\x00i\x00g\x00h\x00t\x00 
+    \x00(\x00c\x00)\x00 \x002\x000\x001\x009\x00 \x00M\x00i\x00c\x00r\x00o\x00s\x00o\x00f\x00t\x00 \x00C\x00o\x00r\x00p\x00o\x00r\x00a\x00t\x00i\x00o\x00n\x00\r\x00\n\x00*
+    \x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*
+    \x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*\x00*
+    \x00*\x00*\x00\r\x00\n\x00\\\x00M\x00i\x00c\x00r\x00o\x00s\x00o\x00f\x00t\x00@\xc7(\x00\x94\xb2)\x00 \x00\x08\xc6\xc1\xc0\x18\xb4\xc0\xc9 
+\x00J\xc5X\xc5\xb5\xc2\xc8\xb2\xe4\xb2.\x00\r\x00\n\x00'
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "C:\Users\user\AppData\Local\Temp\pip-install-14v2k0rf\scikit-learn\setup.py", line 290, in <module>
+        setup_package()
+      File "C:\Users\user\AppData\Local\Temp\pip-install-14v2k0rf\scikit-learn\setup.py", line 286, in setup_package
+        setup(**metadata)
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\distutils\core.py", line 137, in setup
+        config = configuration()
+      File "C:\Users\user\AppData\Local\Temp\pip-install-14v2k0rf\scikit-learn\setup.py", line 174, in configuration
+        config.add_subpackage('sklearn')
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\distutils\misc_util.py", line 1033, in add_subpackage
+        config_list = self.get_subpackage(subpackage_name, subpackage_path,
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\distutils\misc_util.py", line 999, in get_subpackage
+        config = self._get_configuration_from_setup_py(
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\distutils\misc_util.py", line 941, in _get_configuration_from_setup_py
+        config = setup_module.configuration(*args)
+      File "sklearn\setup.py", line 76, in configuration
+        maybe_cythonize_extensions(top_path, config)
+      File "C:\Users\user\AppData\Local\Temp\pip-install-14v2k0rf\scikit-learn\sklearn\_build_utils\__init__.py", line 42, in maybe_cythonize_extensions
+        with_openmp = check_openmp_support()
+      File "C:\Users\user\AppData\Local\Temp\pip-install-14v2k0rf\scikit-learn\sklearn\_build_utils\openmp_helpers.py", line 83, in check_openmp_support
+        ccompiler.compile(['test_openmp.c'], output_dir='objects',
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\distutils\_msvccompiler.py", line 360, in compile
+        self.initialize()
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\distutils\_msvccompiler.py", line 253, in initialize
+        vc_env = _get_vc_env(plat_spec)
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\setuptools\msvc.py", line 185, in msvc14_get_vc_env
+        return EnvironmentInfo(plat_spec, vc_min_ver=14.0).return_env()
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\setuptools\msvc.py", line 1227, in return_env
+        [self.VCIncludes,
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\setuptools\msvc.py", line 876, in VCIncludes
+        return [os.path.join(self.si.VCInstallDir, 'Include'),
+      File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\setuptools\msvc.py", line 555, in VCInstallDir
+        raise distutils.errors.DistutilsPlatformError(msg)
+    distutils.errors.DistutilsPlatformError: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C++ Build Tools": https://visualstudio.microsoft.com/downloads/
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: 
+'C:\Users\user\AppData\Local\Programs\Python\Python38\python.exe' -u -c 
+'import sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\user\\AppData\\Local\\Temp\\pip-install-14v2k0rf\\scikit-learn\\setup.py'"'"';
+ __file__='"'"'C:\\Users\\user\\AppData\\Local\\Temp\\pip-install-14v2k0rf\\scikit-learn\\setup.py'"'"';
+ f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' 
+ install --record 'C:\Users\user\AppData\Local\Temp\pip-record-kvqibxaj\install-record.txt' --single-version-externally-managed --compile Check the logs for full command output.
