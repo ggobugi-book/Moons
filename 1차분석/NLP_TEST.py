@@ -9,8 +9,12 @@ from IPython import embed
 import re
 
 komoran=Komoran() 
-text_file=open("C:/Users/student/Documents/GitHub/Moons/1차분석/test1.txt",'r',encoding='utf-8')
+text_file=open("C:/Users/student/Documents/GitHub/Moons/1차분석/test4.txt",'r',encoding='utf-8')
 data=text_file.readlines()
+for i in data:
+    re.split(" ",i),
+    re.split("\n",i)
+
 noun_data = komoran.nouns(data)
 print(noun_data)
 cv = CountVectorizer()
