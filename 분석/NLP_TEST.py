@@ -8,38 +8,63 @@ import pandas as pd
 from IPython import embed
 import re
 
+
 komoran=Komoran() 
-text_file=open("C:/Users/student/Documents/GitHub/Moons/1차분석/test4.txt",'r',encoding='utf-8')
-data=text_file.readlines()
-for i in data:
-    re.split(" ",i),
-    re.split("\n",i)
-
-noun_data = komoran.nouns(data)
-print(noun_data)
-cv = CountVectorizer()
-word_count_vector = cv.fit_transform(noun_data)
-
-tfidf=TfidfTransformer(smooth_idf=True,use_idf=True)
-tfidf.fit(word_count_vector)
-
-# df = pd.DataFrame(tfidf.idf_,index=cv.get_feature_names(),columns=["idf_weight"])
-# print(df)
-
-#행렬형식으로 문서의 단어 개수를 가지고오는 코드
-count_vector =cv.transform(noun_data)
-print(count_vector)
-
-#print(count_vector.shape())
-#tf-idf score
-
-tfidf_vector = tfidf.transform(count_vector)
-noun_names = cv.get_feature_names()
-first_document_vec = tfidf_vector[2100]
-df = pd.DataFrame(first_document_vec.T.todense(), index=noun_names, columns=["tfidf"])
-df.sort_values(by=["tfidf"],ascending=True)
 
 
+path=open("C:/Users/student/Documents/GitHub/Moons/1차분석/test1.txt",'r',encoding='utf-8')
+data=path.readlines()
+
+words = []
+
+for line in data:
+
+    line = line[:len(line)-1]   
+
+    
+    if not line:
+        break
+    elif line =="\n":
+        continue
+    elif line =="" :
+        continue
+
+    line = line.replace("'","")
+    words = komoran.nouns(line)
+    print(words)
+    
+
+    
+
+
+
+#//////////////////////////////////////////
+
+# noun_data = komoran.nouns(data)
+# print(noun_data)
+# cv = CountVectorizer()
+# word_count_vector = cv.fit_transform(noun_data)
+
+# tfidf=TfidfTransformer(smooth_idf=True,use_idf=True)
+# tfidf.fit(word_count_vector)
+
+# # df = pd.DataFrame(tfidf.idf_,index=cv.get_feature_names(),columns=["idf_weight"])
+# # print(df)
+
+# #행렬형식으로 문서의 단어 개수를 가지고오는 코드
+# count_vector =cv.transform(noun_data)
+# print(count_vector)
+
+# #print(count_vector.shape())
+# #tf-idf score
+
+# tfidf_vector = tfidf.transform(count_vector)
+# noun_names = cv.get_feature_names()
+# first_document_vec = tfidf_vector[2100]
+# df = pd.DataFrame(first_document_vec.T.todense(), index=noun_names, columns=["tfidf"])
+# df.sort_values(by=["tfidf"],ascending=True)
+
+#////////////////////////////////////
 
 #print(df)
 #print(tfidf_vector)
