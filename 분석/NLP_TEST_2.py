@@ -8,22 +8,14 @@ import pandas as pd
 from IPython import embed
 import re
 
-
-
 komoran=Komoran() 
 
-
-path=open("C:/Users/student/Documents/GitHub/Moons/분석/test2.txt",'r',encoding='utf-8')
-data=path.readlines()
-
+path=open("C:/Users/student/Documents/GitHub/Moons/분석/test4.txt",'r',encoding='utf-8')
+line=path.read()
 
 words = []
 
-for line in data:
-
-    line = line[:len(line)-1]   
-
-    
+while True:
     if not line:
         break
     elif line =="\n":
