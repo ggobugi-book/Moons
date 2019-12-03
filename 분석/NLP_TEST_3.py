@@ -11,45 +11,33 @@ import re
 
 
 komoran=Komoran(userdic='C:/Users/student/Documents/GitHub/Moons/분석/user_dic.txt') 
+path= open("C:/Users/student/Documents/GitHub/Moons/분석/test4.txt",'r',encoding='utf-8')
 
-with open("C:/Users/student/Documents/GitHub/Moons/분석/test4.txt",'r',encoding='utf-8') as path:
 
-    
+line = path.read()
+line = line.replace("'","").replace("?","").replace(".","").replace("'","").replace('"'
+,"").replace("!","").replace("-","").replace('"',"").replace("\n","")
+line = re.sub("\n","", line).strip()
 
-    result=[]
-    while True:
+words = komoran.nouns(line)
+print(words)
+# if line == "" :
+#     continue
 
-        try:
-            line=path.read()
 
-            line = line.replace("'","").replace("?","").replace(".","").replace("'","").replace('"'
-            ,"").replace("!","").replace("-","").replace('"',"").replace("\n","")
+# print(words)
+# if len(words) == 0:
+#     continue
 
-            print(line)
+# result.append(words)
 
-        if not line:
-            break
 
-        line = re.sub("\n","", line).strip()
 
-        if line == "" :
-            continue
 
-        words = komoran.nouns(line)
-
-        if len(words) == 0:
-            continue
-
-        result.append(words)
-
-        except Exception as e:
-        continue
-        print(result)
-
-for b in result:
-    for w in b:
-        print(w,end="\t")
-print("")
+# for b in result:
+#     for w in b:
+#         print(w,end="\t")
+# print("")
     
 #list_line=line.split()
 

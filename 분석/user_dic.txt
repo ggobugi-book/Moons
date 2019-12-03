@@ -1,0 +1,39 @@
+최서희	NNP
+김길상	NNP
+용이	NNP
+이용	NNP
+구천	NNP
+긴환	NNP
+거복	NNP
+김거복	NNP
+김평산	NNP
+봉순	NNP
+월선	NNP
+공월선	NNP
+이상현	NNP
+강포수	NNP
+귀녀	NNP
+공노인	NNP
+김두만	NNP
+김이평	NNP
+김한복	NNP
+김훈장	NNP
+별당아씨	NNP
+송관수	NNP
+심금녀	NNP
+오가다 지로	NNP
+옥이네	NNP
+우관 스님	NNP
+유인실	NNP
+윤씨 부인	NNP
+이동진	NNP
+이상의	NNP
+이홍	NNP
+임이네	NNP
+조준구	NNP
+조찬하	NNP
+주감	NNP
+최윤국	NNP
+최치수	NNP
+최환국	NNP
+혜관스님	NNP 
