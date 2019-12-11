@@ -19,7 +19,7 @@ import json
 class KnuSL():
 
 	def data_list(wordname):	
-		with open('data/SentiWord_info.json', encoding='utf-8-sig', mode='r') as f:
+		with open('C:/Users/student/Documents/GitHub/Moons/분석/data/SentiWord_info.json', encoding='utf-8-sig', mode='r') as f:
 			data = json.load(f)
 		result = ['None','None']	
 		for i in range(0, len(data)):
